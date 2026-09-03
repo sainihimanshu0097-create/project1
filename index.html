@@ -1,0 +1,3529 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
+
+  <title>For Vishakha</title>
+
+  <!-- GOOGLE FONTS -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =================================
+       GLOBAL
+    ================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #111;
+      color: white;
+      overflow-x: hidden;
+    }
+
+
+    /* =================================
+       GENERAL SECTION
+    ================================= */
+
+    section {
+      padding: 120px 8%;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: #c9959d;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(45px, 7vw, 90px);
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+
+    /* =================================
+       INTRO SECTION
+    ================================= */
+
+    .intro {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          #4b3045,
+          transparent 40%
+        ),
+        #111;
+    }
+
+    .intro-content {
+      max-width: 750px;
+    }
+
+    .intro h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(55px, 10vw, 120px);
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .intro p {
+      max-width: 550px;
+      margin: 0 auto 35px;
+      color: #aaa;
+      line-height: 1.8;
+    }
+
+    .enter-btn {
+      display: inline-block;
+      padding: 16px 45px;
+
+      border: 1px solid #d8a1a8;
+
+      color: white;
+      text-decoration: none;
+
+      font-size: 13px;
+      letter-spacing: 2px;
+
+      transition: 0.4s;
+    }
+
+    .enter-btn:hover {
+      background: white;
+      color: black;
+      transform: translateY(-5px);
+    }
+
+
+    /* =================================
+       PHOTO GALLERY
+    ================================= */
+
+    .memories {
+      background: #f2eee7;
+      color: #1b1b1b;
+    }
+
+    .memories .section-label {
+      color: #9a646c;
+    }
+
+    .gallery {
+      max-width: 1200px;
+      margin: 70px auto 0;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .photo-card {
+      height: 380px;
+
+      overflow: hidden;
+      position: relative;
+
+      background: #ddd;
+    }
+
+    .photo-card:nth-child(2),
+    .photo-card:nth-child(5) {
+      transform: translateY(50px);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: 0.7s;
+    }
+
+    .photo-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .photo-number {
+      position: absolute;
+
+      bottom: 15px;
+      left: 20px;
+
+      background: rgba(0, 0, 0, 0.6);
+
+      color: white;
+
+      padding: 7px 12px;
+
+      font-size: 12px;
+    }
+
+
+    /* =================================
+       EYES VIDEO SECTION
+    ================================= */
+
+    .eyes-section {
+      background: #151515;
+
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 120px 8%;
+    }
+
+    .eyes-container {
+      width: 100%;
+      max-width: 1200px;
+
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .eyes-text {
+      width: 100%;
+    }
+
+    .eyes-text p:not(.section-label) {
+      color: #aaa;
+      line-height: 1.9;
+      margin-top: 30px;
+      max-width: 500px;
+    }
+
+    .eyes-video {
+      width: 100%;
+
+      padding: 12px;
+
+      border: 1px solid rgba(216, 161, 168, 0.4);
+
+      background: #000;
+
+      position: relative;
+
+      box-shadow:
+        0 0 30px
+        rgba(216, 161, 168, 0.1);
+
+      animation:
+        videoGlow
+        3s infinite alternate;
+    }
+
+    .eyes-video video {
+      width: 100%;
+      height: auto;
+
+      display: block;
+
+      object-fit: cover;
+    }
+
+    @keyframes videoGlow {
+
+      from {
+        box-shadow:
+          0 0 20px
+          rgba(216, 161, 168, 0.1);
+      }
+
+      to {
+        box-shadow:
+          0 0 50px
+          rgba(216, 161, 168, 0.35);
+      }
+
+    }
+
+
+    /* =================================
+       THREE NAMES
+    ================================= */
+
+    .identity {
+      background: #272015;
+      color: #eee3ce;
+    }
+
+    .identity-header {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .identity-grid {
+      max-width: 1200px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .name-card {
+      min-height: 350px;
+
+      padding: 40px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      transition: 0.5s;
+
+      overflow: hidden;
+    }
+
+    .name-card::before {
+      content: "";
+
+      position: absolute;
+
+      width: 200px;
+      height: 200px;
+
+      border-radius: 50%;
+
+      background: #d8a1a8;
+
+      opacity: 0.08;
+
+      top: -100px;
+      right: -100px;
+
+      transition: 0.6s;
+    }
+
+    .name-card:hover::before {
+      transform: scale(2);
+    }
+
+    .name-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .name-card span {
+      position: absolute;
+
+      top: 25px;
+      left: 30px;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+
+      color: #c9959d;
+    }
+
+    .name-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 50px;
+      font-weight: 500;
+    }
+
+    .name-card p {
+      margin-top: 20px;
+
+      color: #bbb;
+
+      line-height: 1.8;
+
+      font-size: 14px;
+    }
+
+
+    /* =================================
+       GOOD THINGS
+    ================================= */
+
+    .good-section {
+      background: #111;
+    }
+
+    .qualities {
+      max-width: 1000px;
+      margin: 70px auto 0;
+    }
+
+    .quality {
+      border-top: 1px solid #444;
+
+      padding: 35px 15px;
+
+      display: grid;
+
+      grid-template-columns:
+        70px 1fr;
+
+      gap: 25px;
+
+      align-items: center;
+
+      cursor: pointer;
+
+      transition: 0.4s;
+    }
+
+    .quality:last-child {
+      border-bottom: 1px solid #444;
+    }
+
+    .quality:hover,
+    .quality.active {
+      background: #1c1c1c;
+      padding-left: 30px;
+    }
+
+    .quality-number {
+      color: #c9959d;
+      font-size: 13px;
+    }
+
+    .quality h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+
+    /* =================================
+       HEIGHT SECTION
+    ================================= */
+
+    .height-section {
+      min-height: 100vh;
+
+      background: #d7b9a8;
+
+      color: #211815;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+    }
+
+    .height-content {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .height-section .section-label {
+      color: #734a40;
+    }
+
+    .height-section h2 {
+      font-family: "Playfair Display", serif;
+
+      font-size:
+        clamp(45px, 8vw, 100px);
+
+      line-height: 1;
+
+      margin-bottom: 60px;
+    }
+
+    .height-meter {
+      max-width: 700px;
+
+      height: 350px;
+
+      margin: auto;
+
+      position: relative;
+
+      border-bottom:
+        5px solid #211815;
+    }
+
+    .meter-line {
+      position: absolute;
+
+      left: 50%;
+
+      width: 5px;
+
+      height: 100%;
+
+      background: #211815;
+
+      transform: translateX(-50%);
+    }
+
+    .person-marker {
+      position: absolute;
+
+      left: 50%;
+      bottom: 5px;
+
+      transform: translateX(-50%);
+
+      width: 140px;
+      height: 170px;
+
+      background: #8b5d50;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 25px;
+
+      transition: 0.5s;
+    }
+
+    .person-marker:hover {
+      height: 200px;
+    }
+
+    .ground {
+      margin-top: 20px;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+    }
+
+    .height-text {
+      max-width: 650px;
+
+      margin: 50px auto 0;
+
+      font-size: 18px;
+
+      line-height: 1.9;
+    }
+
+
+    /* =================================
+       FUNNY PERSONALITY
+    ================================= */
+
+    .funny-section {
+      background: #b53c4a;
+      color: #1e0b0e;
+    }
+
+    .funny-grid {
+      max-width: 1200px;
+
+      margin: 70px auto 0;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .funny-card {
+      background: #d45c68;
+
+      min-height: 350px;
+
+      padding: 40px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition: 0.5s;
+    }
+
+    .funny-card:hover {
+      transform:
+        translateY(-15px)
+        rotate(-2deg);
+    }
+
+    .funny-card span {
+      font-family: "Caveat", cursive;
+
+      font-size: 55px;
+
+      opacity: 0.6;
+    }
+
+    .funny-card h3 {
+      font-family: "Playfair Display", serif;
+
+      font-size: 32px;
+
+      margin: 20px 0;
+    }
+
+    .funny-card p {
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+
+    /* =================================
+       SURPRISE GIFT
+    ================================= */
+
+    .gift-section {
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at center,
+          #5a2537,
+          #111 70%
+        );
+
+      text-align: center;
+
+      color: white;
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gift-section .section-title {
+      max-width: 900px;
+    }
+
+    .gift-text {
+      margin-top: 20px;
+      color: #bbb;
+    }
+
+    .gift-wrapper {
+      margin-top: 60px;
+
+      perspective: 1000px;
+    }
+
+    .gift-box {
+      width: 180px;
+      height: 180px;
+
+      position: relative;
+
+      cursor: pointer;
+
+      transition: 0.6s;
+
+      animation:
+        giftFloat
+        2s ease-in-out infinite;
+    }
+
+    .gift-box:hover {
+      transform:
+        rotateY(12deg)
+        scale(1.08);
+    }
+
+    .gift-body {
+      width: 180px;
+      height: 140px;
+
+      position: absolute;
+
+      bottom: 0;
+
+      background: #d45c68;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 65px;
+
+      box-shadow:
+        0 25px 40px
+        rgba(0, 0, 0, 0.4);
+    }
+
+    .gift-lid {
+      width: 200px;
+      height: 45px;
+
+      position: absolute;
+
+      left: -10px;
+      top: 0;
+
+      background: #f0a0aa;
+
+      z-index: 2;
+
+      transform-origin:
+        left bottom;
+
+      transition:
+        0.8s ease;
+    }
+
+    .gift-box.open .gift-lid {
+      transform:
+        rotate(-110deg)
+        translateY(-30px);
+    }
+
+    .gift-box.open {
+      animation: none;
+    }
+
+    .surprise-message {
+      max-width: 600px;
+
+      margin-top: 50px;
+
+      opacity: 0;
+
+      transform:
+        translateY(30px);
+
+      transition: 0.8s ease;
+
+      pointer-events: none;
+    }
+
+    .surprise-message.show {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+    .surprise-message h2 {
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(40px, 6vw, 60px);
+
+      margin-bottom: 25px;
+    }
+
+    .surprise-message p {
+      color: #ddd;
+
+      line-height: 1.8;
+
+      margin-bottom: 15px;
+    }
+
+    @keyframes giftFloat {
+
+      0%,
+      100% {
+        transform:
+          translateY(0);
+      }
+
+      50% {
+        transform:
+          translateY(-15px);
+      }
+
+    }
+
+
+    /* =================================
+       QUIZ SECTION
+    ================================= */
+
+    .quiz-section {
+      min-height: 100vh;
+
+      background: #eee3ce;
+
+      color: #241b16;
+
+      text-align: center;
+    }
+
+    .quiz-section .section-label {
+      color: #9a646c;
+    }
+
+    .quiz-box {
+      max-width: 750px;
+
+      margin: 70px auto 0;
+
+      padding: 50px;
+
+      background: white;
+
+      box-shadow:
+        15px 20px 0
+        rgba(0, 0, 0, 0.1);
+    }
+
+    .quiz-question span {
+      color: #b53c4a;
+
+      font-size: 12px;
+
+      letter-spacing: 3px;
+    }
+
+    .quiz-question h3 {
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(28px, 4vw, 40px);
+
+      margin:
+        25px 0 40px;
+    }
+
+    .quiz-options {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 15px;
+    }
+
+    .quiz-options button {
+      padding: 20px;
+
+      border:
+        1px solid #d7b9a8;
+
+      background: transparent;
+
+      font-family:
+        "Poppins",
+        sans-serif;
+
+      font-size: 15px;
+
+      cursor: pointer;
+
+      transition: 0.4s;
+    }
+
+    .quiz-options button:hover {
+      background: #b53c4a;
+
+      color: white;
+
+      transform:
+        translateY(-5px);
+    }
+
+    .quiz-result {
+      min-height: 30px;
+
+      margin-top: 30px;
+
+      font-size: 18px;
+
+      font-weight: 500;
+    }
+
+
+    /* =================================
+       FILL IN THE BLANKS
+    ================================= */
+
+    .fill-section {
+      min-height: 100vh;
+      background: #f2eee7;
+      color: #211815;
+      text-align: center;
+    }
+
+    .fill-section .section-label {
+      color: #9a646c;
+    }
+
+    .fill-box {
+      max-width: 800px;
+      margin: 70px auto 0;
+      padding: 50px;
+      background: white;
+      text-align: left;
+
+      box-shadow:
+        15px 20px 0
+        rgba(0, 0, 0, 0.1);
+    }
+
+    .fill-intro {
+      text-align: center;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      color: #777;
+    }
+
+    .fill-question {
+      margin-bottom: 30px;
+    }
+
+    .fill-question label {
+      display: block;
+
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .fill-question input,
+    .fill-question textarea {
+      width: 100%;
+      padding: 16px;
+
+      border:
+        1px solid #d7b9a8;
+
+      outline: none;
+
+      font-family:
+        "Poppins",
+        sans-serif;
+
+      font-size: 14px;
+
+      transition: 0.3s;
+    }
+
+    .fill-question textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .fill-question input:focus,
+    .fill-question textarea:focus {
+      border-color: #b53c4a;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(181, 60, 74, 0.1);
+    }
+
+    .save-btn {
+      width: 100%;
+      padding: 18px;
+
+      border: none;
+
+      background: #b53c4a;
+      color: white;
+
+      font-family:
+        "Poppins",
+        sans-serif;
+
+      font-size: 14px;
+
+      cursor: pointer;
+
+      transition: 0.4s;
+    }
+
+    .save-btn:hover {
+      background: #8f2734;
+      transform: translateY(-4px);
+    }
+
+    .saved-answers {
+      margin-top: 50px;
+      display: none;
+    }
+
+    .saved-answers.show-answers {
+      display: block;
+    }
+
+    .saved-title {
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size: 30px;
+      margin-bottom: 30px;
+
+      text-align: center;
+    }
+
+    .answer-card {
+      padding: 20px;
+      margin-bottom: 15px;
+
+      background: #f2eee7;
+
+      border-left:
+        4px solid #b53c4a;
+    }
+
+    .answer-card strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .answer-card p {
+      color: #666;
+      line-height: 1.7;
+    }
+
+
+    /* =================================
+       MOOD METER
+    ================================= */
+
+    .mood-section {
+      min-height: 100vh;
+
+      background:
+        linear-gradient(
+          135deg,
+          #272015,
+          #111
+        );
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .mood-container {
+      max-width: 800px;
+
+      margin: 70px auto 0;
+
+      text-align: left;
+    }
+
+    .mood-item {
+      margin-bottom: 40px;
+    }
+
+    .mood-info {
+      display: flex;
+
+      justify-content: space-between;
+
+      margin-bottom: 12px;
+
+      font-size: 14px;
+
+      letter-spacing: 2px;
+    }
+
+    .mood-bar {
+      width: 100%;
+
+      height: 14px;
+
+      background:
+        rgba(255, 255, 255, 0.1);
+
+      overflow: hidden;
+    }
+
+    .mood-progress {
+      height: 100%;
+
+      width: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          #b53c4a,
+          #f0a0aa
+        );
+
+      transition:
+        width 2s ease;
+    }
+
+
+    /* =================================
+       LONG LETTER
+    ================================= */
+
+    .letter-section {
+      background: #1e1810;
+      padding: 150px 20px;
+    }
+
+    .letter-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .letter-paper {
+      max-width: 900px;
+
+      margin: auto;
+
+      background: #eee3ce;
+
+      color: #30261e;
+
+      padding: 100px 11%;
+
+      position: relative;
+
+      box-shadow:
+        20px 25px 0
+        rgba(0, 0, 0, 0.3);
+    }
+
+    .letter-paper::before {
+      content: "";
+
+      position: absolute;
+
+      top: 30px;
+      bottom: 30px;
+
+      left: 40px;
+
+      width: 2px;
+
+      background:
+        rgba(150, 90, 70, 0.25);
+    }
+
+    .letter-date {
+      text-align: right;
+
+      font-family: "Caveat", cursive;
+
+      font-size: 28px;
+
+      margin-bottom: 70px;
+    }
+
+    .letter-body {
+      font-family: "Caveat", cursive;
+
+      font-size:
+        clamp(24px, 3vw, 34px);
+
+      line-height: 1.7;
+    }
+
+    .letter-body p {
+      margin-bottom: 35px;
+    }
+
+    .signature {
+      margin-top: 80px;
+
+      font-size: 42px;
+    }
+
+
+    /* =================================
+       FINAL SECTION
+    ================================= */
+
+    .final {
+      min-height: 100vh;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle,
+          #43263a,
+          #0e0e0e 60%
+        );
+    }
+
+    .final-content {
+      max-width: 850px;
+    }
+
+    .final h2 {
+      font-family:
+        "Playfair Display",
+        serif;
+
+      font-size:
+        clamp(50px, 9vw, 130px);
+
+      font-weight: 500;
+
+      line-height: 1;
+    }
+
+    .final p {
+      max-width: 600px;
+
+      margin: 40px auto;
+
+      color: #aaa;
+
+      line-height: 1.9;
+    }
+
+
+    /* =================================
+       RESPONSIVE DESIGN
+    ================================= */
+
+    @media (max-width: 900px) {
+
+      .gallery {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .photo-card:nth-child(2),
+      .photo-card:nth-child(5) {
+        transform: none;
+      }
+
+      .eyes-container {
+        grid-template-columns: 1fr;
+      }
+
+      .identity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .funny-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 80px 20px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-card {
+        height: 420px;
+      }
+
+      .quality {
+        grid-template-columns:
+          40px 1fr;
+      }
+
+      .letter-paper {
+        padding: 70px 12%;
+      }
+
+      .letter-body {
+        font-size: 25px;
+      }
+
+      .quiz-box {
+        padding: 30px 20px;
+      }
+
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+
+      .fill-box {
+        padding: 30px 20px;
+      }
+
+      .fill-question label {
+        font-size: 19px;
+      }
+
+    }
+    /* =================================
+   AI CAMERA MOOD DETECTOR
+================================= */
+
+.mood-section {
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #272015,
+      #111
+    );
+
+  color: white;
+
+  text-align: center;
+}
+
+.mood-intro {
+  max-width: 600px;
+
+  margin: 30px auto 0;
+
+  color: #aaa;
+
+  line-height: 1.8;
+}
+
+.camera-mood-container {
+  max-width: 850px;
+
+  margin: 60px auto 0;
+}
+
+
+/* CAMERA BOX */
+
+.camera-box {
+  width: 100%;
+
+  min-height: 450px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(240, 160, 170, 0.4);
+
+  background: #000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 50px
+    rgba(181, 60, 74, 0.15);
+}
+
+#moodVideo {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transform: scaleX(-1);
+}
+
+#moodCanvas {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+.camera-placeholder {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  color: #aaa;
+
+  font-size: 16px;
+
+  pointer-events: none;
+}
+
+.camera-placeholder {
+  font-size: 60px;
+}
+
+.camera-placeholder span {
+  font-size: 14px;
+
+  letter-spacing: 1px;
+}
+
+
+/* BUTTONS */
+
+.mood-controls {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+}
+
+.camera-btn,
+.save-mood-btn {
+  padding: 16px 30px;
+
+  border:
+    1px solid
+    #f0a0aa;
+
+  background: transparent;
+
+  color: white;
+
+  font-family:
+    "Poppins",
+    sans-serif;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+}
+
+.camera-btn:hover,
+.save-mood-btn:hover {
+  background: #f0a0aa;
+
+  color: #111;
+
+  transform:
+    translateY(-5px);
+}
+
+.secondary-btn {
+  border-color: #c9959d;
+}
+
+
+/* RESULT */
+
+.ai-mood-result {
+  margin-top: 50px;
+
+  padding: 40px;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+.mood-emoji {
+  font-size: 70px;
+
+  margin-bottom: 20px;
+
+  animation:
+    moodBounce
+    2s infinite;
+}
+
+.ai-mood-result h3 {
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(32px, 5vw, 55px);
+
+  font-weight: 500;
+
+  margin-bottom: 15px;
+}
+
+.ai-mood-result p {
+  color: #bbb;
+
+  line-height: 1.8;
+}
+
+
+/* CONFIDENCE BAR */
+
+.mood-percentage {
+  width: 100%;
+
+  height: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  margin-top: 30px;
+
+  overflow: hidden;
+}
+
+.mood-confidence {
+  width: 0%;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b53c4a,
+      #f0a0aa
+    );
+
+  transition:
+    width 1s ease;
+}
+
+.confidence-text {
+  margin-top: 12px;
+}
+
+
+/* SAVE BUTTON */
+
+.save-mood-btn {
+  margin-top: 30px;
+}
+
+
+/* SAVED MOOD */
+
+.saved-mood-box {
+  margin-top: 40px;
+
+  padding: 25px;
+
+  border:
+    1px dashed
+    rgba(240, 160, 170, 0.4);
+}
+
+.saved-mood-box h3 {
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 28px;
+
+  margin-bottom: 15px;
+}
+
+.saved-mood-box p {
+  color: #bbb;
+}
+
+
+@keyframes moodBounce {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .camera-box {
+    min-height: 350px;
+  }
+
+  .mood-controls {
+    flex-direction: column;
+  }
+
+  .camera-btn,
+  .save-mood-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =================================
+   PREMIUM CINEMATIC EFFECTS
+================================= */
+
+/* CUSTOM CURSOR GLOW */
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  left: var(--mouse-x, 50%);
+  top: var(--mouse-y, 50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 999;
+  background: radial-gradient(
+    circle,
+    rgba(216, 161, 168, 0.10) 0%,
+    rgba(216, 161, 168, 0.04) 30%,
+    transparent 70%
+  );
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* SCROLL PROGRESS */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #b53c4a,
+    #f0a0aa,
+    #eee3ce
+  );
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(240, 160, 170, 0.8);
+}
+
+/* FLOATING PARTICLES */
+
+.particle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(240, 160, 170, 0.7);
+  pointer-events: none;
+  animation: particleFloat linear infinite;
+  z-index: 0;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(110vh) translateX(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.7;
+  }
+
+  85% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: translateY(-10vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+
+/* PREMIUM INTRO */
+
+.intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.intro::before,
+.intro::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  animation: ambientMove 10s ease-in-out infinite alternate;
+}
+
+.intro::before {
+  background: #b53c4a;
+  top: -250px;
+  left: -200px;
+}
+
+.intro::after {
+  background: #6b3b70;
+  bottom: -250px;
+  right: -200px;
+  animation-delay: -5s;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes ambientMove {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(100px, 60px) scale(1.3);
+  }
+}
+
+
+/* TITLE ANIMATION */
+
+.intro h1 {
+  animation: titleReveal 1.5s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.intro p {
+  animation: fadeUp 1.5s 0.3s both;
+}
+
+.intro .enter-btn {
+  animation: fadeUp 1.5s 0.6s both;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(100px) rotateX(-40deg);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* PHOTO 3D TILT */
+
+.photo-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.2s ease, box-shadow 0.4s ease;
+}
+
+.photo-card:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.photo-card img {
+  transform: translateZ(20px);
+}
+
+.photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.2),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.photo-card:hover::after {
+  opacity: 1;
+}
+
+
+/* NAME CARD 3D */
+
+.name-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.name-card h3,
+.name-card p,
+.name-card span {
+  transform: translateZ(30px);
+}
+
+
+/* GIFT BOX PREMIUM 3D */
+
+.gift-wrapper {
+  perspective: 1200px;
+}
+
+.gift-box {
+  transform-style: preserve-3d;
+}
+
+.gift-body {
+  transform: translateZ(30px);
+}
+
+.gift-lid {
+  box-shadow:
+    0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.gift-box.open .gift-lid {
+  transform:
+    rotateX(-130deg)
+    rotateZ(-15deg)
+    translateY(-40px)
+    translateZ(50px);
+}
+
+
+/* LETTER CINEMATIC EFFECT */
+
+.letter-section {
+  position: relative;
+  overflow: hidden;
+  perspective: 1800px;
+}
+
+.letter-section::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle,
+    rgba(216, 161, 168, 0.18),
+    transparent 65%
+  );
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.letter-paper {
+  transform-style: preserve-3d;
+  transition:
+    transform 0.7s cubic-bezier(.16, 1, .3, 1),
+    box-shadow 0.7s ease;
+}
+
+.letter-paper:hover {
+  transform:
+    rotateX(2deg)
+    rotateY(-2deg)
+    translateY(-10px);
+
+  box-shadow:
+    30px 40px 80px
+    rgba(0, 0, 0, 0.5);
+}
+
+
+/* LETTER SHINE */
+
+.letter-paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.35),
+    transparent 70%
+  );
+
+  transform: translateX(-100%);
+  transition: 1s;
+  pointer-events: none;
+}
+
+.letter-paper:hover::after {
+  transform: translateX(100%);
+}
+
+
+/* QUALITY HOVER LIGHT */
+
+.quality {
+  position: relative;
+  overflow: hidden;
+}
+
+.quality::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(181, 60, 74, 0.18),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.quality:hover::before {
+  width: 100%;
+}
+
+
+/* SECTION TITLE EFFECT */
+
+.section-title {
+  transition: transform 0.5s ease;
+}
+
+section:hover .section-title {
+  transform: translateX(8px);
+}
+
+
+/* SMOOTH FINAL TEXT */
+
+.final h2 {
+  text-shadow:
+    0 0 40px rgba(216, 161, 168, 0.2);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  body::after {
+    width: 180px;
+    height: 180px;
+  }
+
+  .letter-paper:hover {
+    transform: none;
+  }
+
+}
+
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+  <!-- =================================
+       SIMPLE INTRO
+  ================================= -->
+
+  <section class="intro">
+
+```
+<div class="intro-content">
+
+  <h1>Baby Vishakha.</h1>
+
+  <p>
+    Bhai jaldi mat soya karo yrr,
+    tum to soo jate ho aur mujhe ye sab banana padta hai.
+    Bore ho jata hu aur tum mast
+    "ghode bech kar" soo jate ho 😩
+  </p>
+
+  <a
+    href="#memories"
+    class="enter-btn"
+  >
+    Click Kar Suar 🐷
+  </a>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       PHOTO GALLERY
+  ================================= -->
+
+  <section
+    class="memories"
+    id="memories"
+  >
+
+```
+<p class="section-label">
+  SOME MOMENTS OF VISHAKHA
+</p>
+
+<h2 class="section-title">
+  Six Frames.
+  One Interesting Person.
+</h2>
+
+
+<div class="gallery">
+
+  <div class="photo-card">
+
+    <img
+      src="photo1.jpg"
+      alt="Vishakha Photo 1"
+    >
+
+    <span class="photo-number">
+      MEMORY 01
+    </span>
+
+  </div>
+
+
+  <div class="photo-card">
+
+    <img
+      src="photo2.jpg"
+      alt="Vishakha Photo 2"
+    >
+
+    <span class="photo-number">
+      MEMORY 02
+    </span>
+
+  </div>
+
+
+  <div class="photo-card">
+
+    <img
+      src="photo3.jpg"
+      alt="Vishakha Photo 3"
+    >
+
+    <span class="photo-number">
+      MEMORY 03
+    </span>
+
+  </div>
+
+
+  <div class="photo-card">
+
+    <img
+      src="photo4.jpg"
+      alt="Vishakha Photo 4"
+    >
+
+    <span class="photo-number">
+      MEMORY 04
+    </span>
+
+  </div>
+
+
+  <div class="photo-card">
+
+    <img
+      src="photo5.jpg"
+      alt="Vishakha Photo 5"
+    >
+
+    <span class="photo-number">
+      MEMORY 05
+    </span>
+
+  </div>
+
+
+  <div class="photo-card">
+
+    <img
+      src="photo6.jpg"
+      alt="Vishakha Photo 6"
+    >
+
+    <span class="photo-number">
+      MEMORY 06
+    </span>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       EYES VIDEO SECTION
+  ================================= -->
+
+  <section class="eyes-section">
+
+```
+<div class="eyes-container">
+
+  <div class="eyes-text">
+
+    <p class="section-label">
+      A SMALL MOMENT
+    </p>
+
+    <h2 class="section-title">
+      Her Eyes Have<br>
+      Their Own Story.
+    </h2>
+
+    <p>
+      Kabhi kabhi kuch cheezein
+      words mein explain nahi hoti.
+      Bas unhe notice kiya jaata hai.
+    </p>
+
+  </div>
+
+
+  <div class="eyes-video">
+
+    <video controls playsinline>
+
+      <source
+        src="clideo_editor_a49ace90374b4ac6bfd471978d00ec46.mp4"
+        type="video/mp4"
+      >
+
+      Your browser does not support the video tag.
+
+    </video>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       THREE NAMES
+  ================================= -->
+
+  <section class="identity">
+
+```
+<div class="identity-header">
+
+  <p class="section-label">
+    ONE PERSON
+  </p>
+
+  <h2 class="section-title">
+    Three Names.
+  </h2>
+
+</div>
+
+
+<div class="identity-grid">
+
+  <div class="name-card">
+
+    <span>01</span>
+
+    <h3>Vishakha</h3>
+
+    <p>
+      The original version.
+      Apni personality,
+      apni stories
+      aur apne adventures ke saath.
+    </p>
+
+  </div>
+
+
+  <div class="name-card">
+
+    <span>02</span>
+
+    <h3>Gunu</h3>
+
+    <p>
+      Thoda zyada personal naam.
+      Shayad thoda zyada
+      comfortable version bhi.
+    </p>
+
+  </div>
+
+
+  <div class="name-card">
+
+    <span>03</span>
+
+    <h3>kesar</h3>
+
+    <p>
+      Naam alag hai.
+      Lekin harkatein,
+      personality aur chaos
+      wahi hai.
+    </p>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       GOOD THINGS
+  ================================= -->
+
+  <section class="good-section">
+
+```
+<p class="section-label">
+  THE GOOD THINGS
+</p>
+
+<h2 class="section-title">
+  Things That Make
+  Her Special.
+</h2>
+
+
+<div class="qualities">
+
+  <div class="quality">
+
+    <span class="quality-number">
+      01
+    </span>
+
+    <div>
+      <h3>Her Lips</h3>
+    </div>
+
+  </div>
+
+
+  <div class="quality">
+
+    <span class="quality-number">
+      02
+    </span>
+
+    <div>
+      <h3>Her Voice</h3>
+    </div>
+
+  </div>
+
+
+  <div class="quality">
+
+    <span class="quality-number">
+      03
+    </span>
+
+    <div>
+      <h3>Her Unique Personality</h3>
+    </div>
+
+  </div>
+
+
+  <div class="quality">
+
+    <span class="quality-number">
+      04
+    </span>
+
+    <div>
+      <h3>Her Masti</h3>
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       HEIGHT SECTION
+  ================================= -->
+
+  <section class="height-section">
+
+```
+<div class="height-content">
+
+  <p class="section-label">
+    A VERY SERIOUS INVESTIGATION
+  </p>
+
+  <h2>
+    Let's Talk
+    About Her Height.
+  </h2>
+
+
+  <div class="height-meter">
+
+    <div class="meter-line"></div>
+
+    <div class="person-marker">
+      Vishakha
+    </div>
+
+  </div>
+
+
+  <p class="ground">
+    GROUND LEVEL
+  </p>
+
+
+  <p class="height-text">
+    Haan, height thodi choti hai.
+    Lekin confidence,
+    attitude aur adventures ka size
+    definitely chota nahi hai.
+    Isliye height ke basis par
+    Vishakha ko underestimate mat karna.
+  </p>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       FUNNY SIDE
+  ================================= -->
+
+  <section class="funny-section">
+
+```
+<p class="section-label">
+  THE UNEXPECTED SIDE OF VISHAKHA
+</p>
+
+<h2 class="section-title">
+  Choti Height.
+  Big Adventures.
+</h2>
+
+
+<div class="funny-grid">
+
+  <div class="funny-card">
+
+    <span>01</span>
+
+    <h3>The Staircase Story</h3>
+
+    <p>
+      Kabhi kabhi Vishakha
+      seedhiyon se girti hai.
+      Aur kabhi kabhi gravity
+      bas extra interested ho jaati hai.
+    </p>
+
+  </div>
+
+
+  <div class="funny-card">
+
+    <span>02</span>
+
+    <h3>Cylinder Lifting Department</h3>
+
+    <p>
+      Height dekh kar
+      underestimate mat karna.
+      Jab cylinder uthane ka time aaye,
+      Tom-boy mode activate ho sakta hai.
+    </p>
+
+  </div>
+
+
+  <div class="funny-card">
+
+    <span>03</span>
+
+    <h3>Tom-Boy Energy</h3>
+
+    <p>
+      Thodi different.
+      Thodi fearless.
+      Thodi strong.
+      Aur definitely
+      boring bilkul nahi.
+    </p>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       SURPRISE GIFT BOX
+  ================================= -->
+
+  <section class="gift-section">
+
+```
+<p class="section-label">
+  A LITTLE SURPRISE
+</p>
+
+<h2 class="section-title">
+  Don't Open This. 👀
+</h2>
+
+<p class="gift-text">
+  Vishakha,
+  mat click karna 😥
+</p>
+
+
+<div class="gift-wrapper">
+
+  <div
+    class="gift-box"
+    id="giftBox"
+  >
+
+    <div class="gift-lid"></div>
+
+    <div class="gift-body">
+      🎁
+    </div>
+
+  </div>
+
+</div>
+
+
+<div
+  class="surprise-message"
+  id="surpriseMessage"
+>
+
+  <h2>
+    Surpriseeee! 😂❤️
+  </h2>
+
+  <p>
+    tumahari gan* masti to dekho bolne k baad bi open kar liya😭😂
+  </p>
+
+  <p>
+    Tumhare liye ek special message:
+    <br>
+    <strong>
+      Tum Boni ho 😂❤️
+    </strong>
+  </p>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       VISHAKHA QUIZ
+  ================================= -->
+
+  <section class="quiz-section">
+
+```
+<p class="section-label">
+  VERY IMPORTANT TEST 😂
+</p>
+
+<h2 class="section-title">
+  How Well Do You Know Vishakha?
+</h2>
+
+
+<div class="quiz-box">
+
+  <div class="quiz-question">
+
+    <span>
+      QUESTION 01
+    </span>
+
+    <h3>
+      Vishakha ka favourite kaam kya hai? 😭
+    </h3>
+
+  </div>
+
+
+  <div class="quiz-options">
+
+    <button onclick="checkAnswer(false)">
+      😂 Masti karna
+    </button>
+
+    <button onclick="checkAnswer(false)">
+      😡 Gussa karna
+    </button>
+
+    <button onclick="checkAnswer(true)">
+      😴 Jaldi sona
+    </button>
+
+    <button onclick="checkAnswer(false)">
+      🤔 Random adventures
+    </button>
+
+  </div>
+
+
+  <div
+    class="quiz-result"
+    id="quizResult"
+  ></div>
+
+</div>
+```
+
+  </section>
+
+
+
+
+ 
+  <!-- =================================
+       LONG HINGLISH LETTER
+  ================================= -->
+
+  <section class="letter-section">
+
+```
+<div class="letter-header">
+
+  <p class="section-label">
+    SOMETHING I WANTED TO SAY
+  </p>
+
+  <h2 class="section-title">
+    A Letter For Vishakha.
+  </h2>
+
+</div>
+
+
+<article class="letter-paper">
+
+  <div class="letter-date">
+    Written especially for you
+  </div>
+
+
+  <div class="letter-body">
+
+    <p>Dear Vishakha,</p>
+
+    <p>
+      Gunu bolu... ya kesar?
+      Honestly, tumhare itne names hain ki
+      kabhi kabhi samajh hi nahi aata
+      ki kis naam se bulaun.
+    </p>
+
+    <p>
+      Sabse pehle tumhari eyes ki baat karte hain.
+      Yaar, tumhari eyes bilkul baby jaisi innocent
+      aur cute hain. Unme ek alag si softness hai.
+      Kabhi unhe dekho toh lagta hai ki tum
+      kuch bole bina bhi bahut kuch keh sakti ho.
+    </p>
+
+    <p>
+      Aur phir tumhare cheeks...
+      itne soft hain ki unke baare mein
+      mention karna toh banta tha.
+      Aur jab tum smile karti ho aur
+      tumhare cheeks par woh cute se dimples aate hain,
+      honestly woh moment aur bhi special ho jaata hai.
+    </p>
+
+    <p>
+      Tumhare hairstyle ka bhi apna ek alag charm hai.
+      Tum apne hair kisi bhi style mein rakho,
+      woh tumhari personality ka part lagta hai.
+      Aur shayad isi wajah se tumhari har look mein
+      kuch na kuch unique hota hai.
+    </p>
+
+    <p>
+      Aur tumhari voice... yaar, seriously,
+      tumhari voice bahut achhi hai.
+      Kabhi normal baat karte hue,
+      kabhi call par masti karte hue,
+      aur kabhi bina kisi reason ke random baatein karte hue,
+      tumhari awaaz har moment ko
+      aur interesting bana deti hai.
+    </p>
+
+    <p>
+      Calls par tumhari masti bhi alag level ki hoti hai.
+      Kabhi hasi-mazaak, kabhi random topics,
+      kabhi serious baatein aur kabhi
+      bina kisi reason ke conversation ko
+      interesting bana dena.
+      Shayad isi wajah se tumse baat karna
+      kabhi boring nahi lagta.
+    </p>
+
+    <p>
+      Aur haan, tumhara gussa...
+      woh bhi kaafi famous hai.
+      Kabhi kabhi tum itni jaldi naraz ho jaati ho
+      ki samajhne mein thoda time lagta hai
+      ki exactly galti hui kya hai.
+    </p>
+
+    <p>
+      Especially jab main kisi doosri ladki se
+      baat karta hoon aur tum naraz ho jaati ho.
+      Tum chahe kuch bhi bolo,
+      lekin kabhi kabhi tumhari jealousy
+      aur tumhara possessive hona
+      clearly notice ho jaata hai.
+    </p>
+
+    <p>
+      Phir bhi, ye sab tumhe tum banata hai.
+      Tumhari cute eyes,
+      tumhare soft cheeks,
+      tumhare dimples,
+      tumhara hairstyle,
+      tumhari amazing voice,
+      calls par tumhari masti,
+      tumhara gussa aur tumhara naraz hona...
+      sab milkar ek hi person ko describe karte hain:
+      Vishakha.
+    </p>
+
+    <p>Ya Gunu.</p>
+
+    <p>
+      Naam teen ho sakte hain,
+      lekin tumhari personality sirf ek hai,
+      aur honestly,
+      uska duplicate milna mushkil hai.
+    </p>
+
+    <p>
+      Bas aise hi rehna.
+      Thodi funny,
+      thodi different,
+      thodi stubborn,
+      thodi naraz hone wali,
+      aur bilkul apne jaisi.
+    </p>
+
+    <p class="special-request">
+      PLEASE GUNU, RAAT KO JALDI MAT SOYA KARO.
+    </p>
+
+    <p class="signature">
+      Kuchu Puchu
+    </p>
+
+  </div>
+
+</article>
+```
+
+  </section>
+
+  <!-- =================================
+       FINAL SECTION
+  ================================= -->
+
+  <section class="final">
+
+```
+<div class="final-content">
+
+  <h2>
+    This Is
+    Vishakha's Story.
+  </h2>
+
+  <p>
+    Gunu ho, kesar ho ya Vishakha,
+    naam kuch bhi ho.
+    Personality ek hi hai.
+    Aur wahi personality
+    is website ko worth making banati hai.
+  </p>
+
+</div>
+```
+
+  </section>
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================= -->
+
+  <script>
+
+    /* =================================
+       INTERACTIVE QUALITIES
+    ================================= */
+
+    const qualities =
+      document.querySelectorAll(".quality");
+
+
+    qualities.forEach((quality) => {
+
+      quality.addEventListener(
+        "click",
+        () => {
+
+          qualities.forEach((item) => {
+
+            if (item !== quality) {
+              item.classList.remove("active");
+            }
+
+          });
+
+          quality.classList.toggle("active");
+
+        }
+      );
+
+    });
+
+
+    /* =================================
+       GIFT BOX
+    ================================= */
+
+    const giftBox =
+      document.getElementById("giftBox");
+
+    const surpriseMessage =
+      document.getElementById(
+        "surpriseMessage"
+      );
+
+
+    if (giftBox) {
+
+      giftBox.addEventListener(
+        "click",
+        () => {
+
+          giftBox.classList.toggle("open");
+
+          surpriseMessage.classList.toggle(
+            "show"
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =================================
+       QUIZ
+    ================================= */
+
+    function checkAnswer(correct) {
+
+      const result =
+        document.getElementById(
+          "quizResult"
+        );
+
+
+      if (correct) {
+
+        result.innerHTML =
+          "😂 CORRECT! Vishakha ko jaldi sone se koi nahi rok sakta 😭❤️";
+
+      } else {
+
+        result.innerHTML =
+          "❌ Galat! Vishakha ka favourite kaam toh jaldi sona hai 😭😂";
+
+      }
+
+    }
+
+
+    /* =================================
+       FILL IN THE BLANKS
+       LOCAL STORAGE
+    ================================= */
+
+    const fillForm =
+      document.getElementById("fillForm");
+
+    const savedAnswers =
+      document.getElementById("savedAnswers");
+
+
+    function displayAnswers() {
+
+      const savedData =
+        JSON.parse(
+          localStorage.getItem(
+            "vishakhaAnswers"
+          )
+        );
+
+
+      if (!savedData) {
+        return;
+      }
+
+
+      savedAnswers.innerHTML = `
+
+        <h3 class="saved-title">
+          Vishakha Ke Answers 😂❤️
+        </h3>
+
+
+        <div class="answer-card">
+
+          <strong>
+            Mera annoying habit:
+          </strong>
+
+          <p>
+            ${savedData.answer1}
+          </p>
+
+        </div>
+
+
+        <div class="answer-card">
+
+          <strong>
+            Main sabse zyada kis cheez ki baat karta hoon:
+          </strong>
+
+          <p>
+            ${savedData.answer2}
+          </p>
+
+        </div>
+
+
+        <div class="answer-card">
+
+          <strong>
+            Mere andar sabse achhi baat:
+          </strong>
+
+          <p>
+            ${savedData.answer3}
+          </p>
+
+        </div>
+
+
+        <div class="answer-card">
+
+          <strong>
+            Mujhe 3 words mein describe karo:
+          </strong>
+
+          <p>
+            ${savedData.answer4}
+          </p>
+
+        </div>
+
+
+        <div class="answer-card">
+
+          <strong>
+            Special Message:
+          </strong>
+
+          <p>
+            ${savedData.answer5}
+          </p>
+
+        </div>
+
+      `;
+
+
+      savedAnswers.classList.add(
+        "show-answers"
+      );
+
+    }
+
+
+    if (fillForm) {
+
+      fillForm.addEventListener(
+        "submit",
+        function (event) {
+
+          event.preventDefault();
+
+
+          const answers = {
+
+            answer1:
+              document
+                .getElementById("answer1")
+                .value,
+
+            answer2:
+              document
+                .getElementById("answer2")
+                .value,
+
+            answer3:
+              document
+                .getElementById("answer3")
+                .value,
+
+            answer4:
+              document
+                .getElementById("answer4")
+                .value,
+
+            answer5:
+              document
+                .getElementById("answer5")
+                .value
+
+          };
+
+
+          localStorage.setItem(
+            "vishakhaAnswers",
+            JSON.stringify(answers)
+          );
+
+
+          displayAnswers();
+
+
+          alert(
+            "Answers successfully save ho gaye 😂❤️"
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =================================
+       LOAD SAVED ANSWERS
+    ================================= */
+
+    displayAnswers();
+
+
+    /* =================================
+       MOOD METER ANIMATION
+    ================================= */
+
+    const moodSection =
+      document.querySelector(
+        ".mood-section"
+      );
+
+
+    if (moodSection) {
+
+      const moodObserver =
+        new IntersectionObserver(
+
+          (entries) => {
+
+            entries.forEach(
+              (entry) => {
+
+                if (entry.isIntersecting) {
+
+                  const bars =
+                    entry.target.querySelectorAll(
+                      ".mood-progress"
+                    );
+
+
+                  bars.forEach(
+                    (bar) => {
+
+                      const progress =
+                        bar.dataset.progress;
+
+                      bar.style.width =
+                        progress + "%";
+
+                    }
+                  );
+
+
+                  moodObserver.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+
+          {
+            threshold: 0.3
+          }
+
+        );
+
+
+      moodObserver.observe(
+        moodSection
+      );
+
+    }
+
+
+    /* =================================
+       SCROLL REVEAL
+    ================================= */
+
+    const elements =
+      document.querySelectorAll(
+        ".photo-card, .name-card, .quality, .funny-card, .letter-paper, .eyes-container, .gift-box, .quiz-box, .fill-box, .mood-container"
+      );
+
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("show");
+
+              observer.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.15
+        }
+
+      );
+
+
+    elements.forEach((element) => {
+
+      element.style.opacity = "0";
+
+      element.style.transform =
+        "translateY(50px)";
+
+      element.style.transition =
+        "opacity 0.8s ease, transform 0.8s ease";
+
+      observer.observe(element);
+
+    });
+
+
+    /* =================================
+       SHOW ANIMATION STYLE
+    ================================= */
+
+    const style =
+      document.createElement("style");
+
+
+    style.innerHTML = `
+
+      .show {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+
+    `;
+/* =================================
+   PREMIUM CURSOR GLOW
+================================= */
+
+document.addEventListener("mousemove", (event) => {
+
+  document.documentElement.style.setProperty(
+    "--mouse-x",
+    event.clientX + "px"
+  );
+
+  document.documentElement.style.setProperty(
+    "--mouse-y",
+    event.clientY + "px"
+  );
+
+});
+
+
+/* =================================
+   SCROLL PROGRESS BAR
+================================= */
+
+const progressBar =
+  document.createElement("div");
+
+progressBar.className =
+  "scroll-progress";
+
+document.body.appendChild(
+  progressBar
+);
+
+
+window.addEventListener("scroll", () => {
+
+  const scrollTop =
+    window.scrollY;
+
+  const documentHeight =
+    document.documentElement.scrollHeight -
+    window.innerHeight;
+
+  const scrollPercentage =
+    (scrollTop / documentHeight) * 100;
+
+  progressBar.style.width =
+    scrollPercentage + "%";
+
+});
+
+
+/* =================================
+   FLOATING PARTICLES
+================================= */
+
+function createParticles() {
+
+  const particleCount = 35;
+
+  for (
+    let i = 0;
+    i < particleCount;
+    i++
+  ) {
+
+    const particle =
+      document.createElement("div");
+
+    particle.classList.add(
+      "particle"
+    );
+
+
+    particle.style.left =
+      Math.random() * 100 + "vw";
+
+
+    const size =
+      Math.random() * 4 + 2;
+
+    particle.style.width =
+      size + "px";
+
+    particle.style.height =
+      size + "px";
+
+
+    particle.style.animationDuration =
+      Math.random() * 10 + 10 + "s";
+
+
+    particle.style.animationDelay =
+      Math.random() * 10 + "s";
+
+
+    document.body.appendChild(
+      particle
+    );
+
+  }
+
+}
+
+createParticles();
+
+
+/* =================================
+   3D PHOTO TILT
+================================= */
+
+const photoCards =
+  document.querySelectorAll(
+    ".photo-card"
+  );
+
+
+photoCards.forEach((card) => {
+
+  card.addEventListener(
+    "mousemove",
+    (event) => {
+
+      const rect =
+        card.getBoundingClientRect();
+
+
+      const x =
+        event.clientX - rect.left;
+
+
+      const y =
+        event.clientY - rect.top;
+
+
+      const centerX =
+        rect.width / 2;
+
+
+      const centerY =
+        rect.height / 2;
+
+
+      const rotateX =
+        (y - centerY) / 15;
+
+
+      const rotateY =
+        (centerX - x) / 15;
+
+
+      card.style.transform =
+        `perspective(1000px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        scale(1.04)`;
+
+    }
+  );
+
+
+  card.addEventListener(
+    "mouseleave",
+    () => {
+
+      card.style.transform = "";
+
+    }
+  );
+
+});
+
+
+/* =================================
+   3D NAME CARD TILT
+================================= */
+
+const nameCards =
+  document.querySelectorAll(
+    ".name-card"
+  );
+
+
+nameCards.forEach((card) => {
+
+  card.addEventListener(
+    "mousemove",
+    (event) => {
+
+      const rect =
+        card.getBoundingClientRect();
+
+      const x =
+        event.clientX - rect.left;
+
+      const y =
+        event.clientY - rect.top;
+
+
+      const rotateY =
+        ((x / rect.width) - 0.5) * 12;
+
+
+      const rotateX =
+        ((y / rect.height) - 0.5) * -12;
+
+
+      card.style.transform =
+        `perspective(1000px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-10px)`;
+
+    }
+  );
+
+
+  card.addEventListener(
+    "mouseleave",
+    () => {
+
+      card.style.transform = "";
+
+    }
+  );
+
+});
+
+
+/* =================================
+   MAGNETIC BUTTON EFFECT
+================================= */
+
+const magneticButtons =
+  document.querySelectorAll(
+    ".enter-btn, .camera-btn, .save-btn"
+  );
+
+
+magneticButtons.forEach((button) => {
+
+  button.addEventListener(
+    "mousemove",
+    (event) => {
+
+      const rect =
+        button.getBoundingClientRect();
+
+
+      const x =
+        event.clientX - rect.left -
+        rect.width / 2;
+
+
+      const y =
+        event.clientY - rect.top -
+        rect.height / 2;
+
+
+      button.style.transform =
+        `translate(${x * 0.15}px,
+        ${y * 0.15}px)`;
+
+    }
+  );
+
+
+  button.addEventListener(
+    "mouseleave",
+    () => {
+
+      button.style.transform = "";
+
+    }
+  );
+
+});
+
+
+/* =================================
+   LETTER PARALLAX
+================================= */
+
+const letterPaper =
+  document.querySelector(
+    ".letter-paper"
+  );
+
+
+if (letterPaper) {
+
+  letterPaper.addEventListener(
+    "mousemove",
+    (event) => {
+
+      const rect =
+        letterPaper.getBoundingClientRect();
+
+
+      const x =
+        event.clientX - rect.left;
+
+
+      const y =
+        event.clientY - rect.top;
+
+
+      const rotateY =
+        ((x / rect.width) - 0.5) * 4;
+
+
+      const rotateX =
+        ((y / rect.height) - 0.5) * -4;
+
+
+      letterPaper.style.transform =
+        `perspective(1500px)
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        translateY(-10px)`;
+
+    }
+  );
+
+
+  letterPaper.addEventListener(
+    "mouseleave",
+    () => {
+
+      letterPaper.style.transform =
+        "";
+
+    }
+  );
+
+}
+
+    document.head.appendChild(style);
+
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+</body>
+
+</html>
